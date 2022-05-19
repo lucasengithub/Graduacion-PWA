@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <script src="https://kit.fontawesome.com/53dbb9e70a.js" crossorigin="anonymous"></script>    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graduación</title>
+    <link rel="icon" type="image/x-icon" href="/icon-96x96.png ">
+    <link rel="manifest" href="manifest.webmanifest">
+    <script type="module">
+        import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+        const el = document.createElement('pwa-update');
+        document.body.appendChild(el);
+     </script>
+    <script>
+    if(window.location.protocol != 'https:') {
+        location.href =   location.href.replace("http://", "https://");
+      }</script>
+</head>
+<body>
+<section class="btm_nav">
+    <div id="bntC"><i class="fa-solid fa-house"  style="color:white"></i></i></i><label class=htext1>  Inicio</label></div>
+    <div id="bntD"><a href="map.html"><i class="fa-solid fa-map"></i></i><label class=htext0>  Mapa</label></a></div>
+    <div id="bntD"><a href="activity.html"><i class="fa-solid fa-person-walking"></i></i><label class=htext0>  Actividades</label></a></div>
+    <div id="bntD"><a href="live.html"><i class="fa-solid fa-video"></i></i></i><label class=htext0>  Directo</label></a></div>
+</section>
+<h1 id="titulo">
+    Graduación 2022
+</h1>
+
+<section id="install-button" class="widgt">
+    <h3>
+        Instale la APP para una mejor experiencia.
+    </h3>
+    <p>
+        (Ocupa menos de 1MB).
+    </p>
+    <ul>
+        <li>
+            <b id="tline">Android:</b><p id="tline"> Haga click en</p><i id="tline" class="material-symbols-outlined">more_vert</i><p id="tline">y después en "</p><i id="tline" class="material-symbols-outlined">install_mobile</i><p id="tline">Instalar aplicación".</p>
+        </li>
+        <div></div>
+        <li>
+            <b id="tline">iOS:</b><p id="tline"> Haga click en </p><i id="tline" class="material-symbols-outlined">ios_share</i><p id="tline"> y después en "</p><i id="tline" class="material-symbols-outlined">add_box</i><p id="tline"> Añadir a pantalla de inicio".</p>
+        </li>
+    </ul>
+</section>
+
+<section class="widgt">
+    <h3>
+        Lugar y Hora.
+    </h3>
+    <p>
+        <a href="https://goo.gl/maps/C1M6uHqNc1PSJ3dw8" target="_blank" rel="noopener">
+            IES Príncipe Felipe</a>. Viernes 20 de Mayo de 19:00 a 21:00.
+    </p>
+    <form action="https://calendar.google.com/event?action=TEMPLATE&tmeid=MjhtOHFwZWMwb2FqcmpsZGt0MXMxcDVhZHIgMWdzaGEwcjR2cGhyYWVqb25rajNtaDd1NzhAZw&tmsrc=1gsha0r4vphraejonkj3mh7u78%40group.calendar.google.com">
+        <button type="submit">Añadir al Calendario</button>
+     </form>
+</section>
+
+<section class="widgt">
+    <h3>
+        Cuenta Atrás.
+    </h3>
+    <div>
+            <p>
+                <span id="days"></span> días,  <span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span>
+            </p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => { 
+  
+          //===
+          // VARIABLES
+          //===
+          const DATE_TARGET = new Date('05/20/2022 19:00');
+          // DOM for render
+          const SPAN_DAYS = document.querySelector('span#days');
+          const SPAN_HOURS = document.querySelector('span#hours');
+          const SPAN_MINUTES = document.querySelector('span#minutes');
+          const SPAN_SECONDS = document.querySelector('span#seconds');
+          // Milliseconds for the calculations
+          const MILLISECONDS_OF_A_SECOND = 1000;
+          const MILLISECONDS_OF_A_MINUTE = MILLISECONDS_OF_A_SECOND * 60;
+          const MILLISECONDS_OF_A_HOUR = MILLISECONDS_OF_A_MINUTE * 60;
+          const MILLISECONDS_OF_A_DAY = MILLISECONDS_OF_A_HOUR * 24
+  
+          //===
+          // FUNCTIONS
+          //===
+  
+          /**
+          * Method that updates the countdown and the sample
+          */
+          function updateCountdown() {
+              // Calcs
+              const NOW = new Date()
+              const DURATION = DATE_TARGET - NOW;
+              const REMAINING_DAYS = Math.floor(DURATION / MILLISECONDS_OF_A_DAY);
+              const REMAINING_HOURS = Math.floor((DURATION % MILLISECONDS_OF_A_DAY) / MILLISECONDS_OF_A_HOUR);
+              const REMAINING_MINUTES = Math.floor((DURATION % MILLISECONDS_OF_A_HOUR) / MILLISECONDS_OF_A_MINUTE);
+              const REMAINING_SECONDS = Math.floor((DURATION % MILLISECONDS_OF_A_MINUTE) / MILLISECONDS_OF_A_SECOND);
+              // Thanks Pablo Monteserín (https://pablomonteserin.com/cuenta-regresiva/)
+  
+              // Render
+              SPAN_DAYS.textContent = REMAINING_DAYS;
+              SPAN_HOURS.textContent = REMAINING_HOURS;
+              SPAN_MINUTES.textContent = REMAINING_MINUTES;
+              SPAN_SECONDS.textContent = REMAINING_SECONDS;
+          }
+  
+          //===
+          // INIT
+          //===
+          updateCountdown();
+          // Refresh every second
+          setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
+      });
+      </script>
+</section>
+
+<section class="widgt">
+    <h3>
+        Actividades
+    </h3>
+    <form action="activity.html">
+        <button type="submit">Ver Actividades</button>
+     </form>
+</section>
+
+<section class="widgt">
+    <h3>
+        Graduación en Directo.
+    </h3>
+    <form action="live.html">
+        <button type="submit">Ver Graduación en Directo</button>
+     </form>
+</section>
+
+<section class="credit">
+    <p>GPL-V3.0 <a>GitHub</a></p>
+    <p>Iconos de <a href="https://fonts.google.com/icons">Google Icons</a> y <a href="https://fontawesome.com/">Font Awesome</a>.</p>
+</section>
+
+</body>
+</html>
+
