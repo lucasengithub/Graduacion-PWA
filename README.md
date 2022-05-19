@@ -2,6 +2,7 @@
 Esta es una PWA que he hecho para mi graduación.
 Puedes adaptarla y hacer lo que quieras con ella (siempre que respetes la licencia).
 Solo funciona con https.
+Iconos de Awsome y Google.
 
 ## Adpata la PWA.
 1. Tienes que cambiar la url y el nombre en "manifest.webmanifest".
