@@ -1,4 +1,4 @@
-# Graduacion-PWA
+# Graduación-PWA
 Esta es una PWA que he hecho para mi graduación.
 Puedes adaptarla y hacer lo que quieras con ella (siempre que respetes la licencia).
 Solo funciona con https.
