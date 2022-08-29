@@ -2,7 +2,7 @@
     "name": "Graduación",
     "short_name": "Graduación 2022",
     "lang": "es-ES",
-    "start_url": "/",
+    "start_url": "https://testground.lucaspeinado.es/Graduacion-PWA/",
     "display": "standalone",
     "theme_color": "#D2D2E2",
     "background_color": "#D2D2E2",
