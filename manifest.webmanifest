@@ -11,15 +11,15 @@
 
     "icons": [
       {
-        "src": "https://graduacion-principefelipe.atwebpages.com/icon-512x512.png",
+        "src": "http://testground.lucaspeinado.es/Graduacion-PWA/icon-512x512.png",
         "sizes": "512x512"
       },
       {
-        "src": "https://graduacion-principefelipe.atwebpages.com/icon-192x192.png",
+        "src": "http://testground.lucaspeinado.es/Graduacion-PWA/icon-192x192.png",
         "sizes": "192x192"
       },
       {
-        "src": "https://graduacion-principefelipe.atwebpages.com/icon-96x96.png",
+        "src": "http://testground.lucaspeinado.es/Graduacion-PWA/icon-96x96.png",
         "sizes": "96x96"
       }
     ]
